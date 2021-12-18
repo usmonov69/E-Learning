@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title  %}| Post Delete {% endblock %}        
+{% block content %}
+
+<div class="page-banner-area page-contact" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                <div class="banner-content content-padding">
+                {% if user.is_superuser %}
+                    
+                    <h1 class="text-white">{{ objects.title }}</h1>
+                    <p>Are you sure delete this?</p>
+                    <form method="POST">{% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-circled">Delete</button>
+                    </form>
+                    {% else %}
+               <h1> You are not allowed</h1>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

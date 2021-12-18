@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--MAIN BANNER AREA START -->
+<div class="banner-area banner-3">
+    <div class="overlay dark-overlay"></div>
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                        <div class="banner-content content-padding">
+                            <h5 class="subtitle">L-programming</h5>
+                            <h1 class="banner-title">Learn programming languages easily with us</h1>
+                            <p>We can offer courses in programming languages (free). We are currently doing technical work on our website, so we only have text lessons. We will add video lessons soon.
+                                <br>stay with us</p><br>
+
+                            <a href="{% url 'blog:course-view' %}" class="btn btn-white btn-circled">lets start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--MAIN HEADER AREA END -->
+<!--  ABOUT AREA START  -->
+    <section id="intro" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <div class="section-heading">
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien erat, porttitor sed sem at, facilisis volutpat est. Duis rutrum nisl i.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5  d-none d-lg-block col-sm-12">
+                    <div class="intro-img">
+                        <img src="{% static  'images/banner/why-choose.png' %}" alt="intro-img" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 ">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="intro-box">
+                                <span>01.</span>
+                                <h4>Quality education</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien erat</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="intro-box">
+                                <span>02.</span>
+                                <h4>Strategy</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien erat, porttitor sed sem at, facilisis volutpat est. Duis rutrum ni. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="intro-box">
+                                <span>03.</span>
+                                <h4>Experience</h4>
+                                <p>Praesent malesuada magna vitae urna malesuada sollicitudin. Aenean sit amet mauris eget magna ultrices iaculis. Nam lacinia interdum.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="intro-box">
+                                <span>04.</span>
+                                <h4>Build Projects</h4>
+                                <p>Nulla at metus ut ex pulvinar consectetur ac et erat. Etiam iaculis est a mi hendrerit  Suspendisse efficitur semper cursu.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                           <div class="intro-cta">
+                               <p class="lead ">Still have any question on mind ? <a href="{% url 'blog:contact-view' %}" class="smoth-scroll">Contact us</a></p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  ABOUT AREA END  -->
+
+<!--  SERVICE AREA START  -->
+<section id="about" class="bg-light">
+    <div class="about-bg-img d-none d-lg-block d-md-block"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12 col-md-8">
+                <div class="about-content">
+                    <h5 class="subtitle">About us</h5>
+                    <h3>Get quality education with us<br> and save your time and money</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien erat, porttitor sed sem at, facilisis volutpat est. Duis rutrum nisl eget tempus bibendum. Donec sit amet ex justo. Suspendisse enim ligula, varius id ex finibus, rutrum volutpat diam. Vestibulum blandit turpis nec mi posuere, in efficitur neque finibus. .</p>
+
+                    <ul class="about-list">
+                        <li><i class="icofont icofont-check-circled"></i> Responsive site</li>
+
+                        <li>
+                            <i class="icofont icofont-check-circled"> </i> Latest bootstrap 4
+                        </li>
+
+                        <li>
+                            <i class="icofont icofont-check-circled"> </i> Modern and clean design
+                        </li>
+                        <li>
+                            <i class="icofont icofont-check-circled"> </i> Working contact form
+                        </li>
+                        <li>
+                            <i class="icofont icofont-check-circled"> </i> Premium services and support
+                        </li>
+                        <li>
+                            <i class="icofont icofont-check-circled"></i> Cross browser compatiabilty
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  SERVICE AREA END  -->
+
+<!--  SERVICE PARTNER START  -->
+<section id="service-head" class=" bg-feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 m-auto">
+                <div class="section-heading text-white">
+                    <h4 class="section-title">Our advantages</h4>
+                    <p>directions we offer you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  SERVICE PARTNER END  -->
+
+<!--  SERVICE AREA START  -->
+    <section id="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box">
+                        <div class="service-img-icon">
+                            <img src="{% static  'images/icon/007-digital-marketing-3.png' %}" alt="service-icon" class="img-fluid">
+                        </div>
+                        <div class="service-inner">
+                            <h4>Web Development</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien erat, bibendu,<span>amet ex justo.</span> .</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box ">
+                        <div class="service-img-icon">
+                            <img src="{% static  'images/icon/008-digital-marketing-2.png' %}" alt="service-icon" class="img-fluid">
+                        </div>
+                        <div class="service-inner">
+                            <h4>Artificial Intelligence</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien erat, porttitor sed sem at,  <span>facilisis volutpat est</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box">
+                        <div class="service-img-icon">
+                            <img src="{% static  'images/icon/003-task.png' %}" alt="service-icon" class="img-fluid">
+                        </div>
+                        <div class="service-inner">
+                            <h4>IOS Development</h4>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien erat, porttitor sed sem at,  <span>facilisis volutpat est</span> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box">
+                        <div class="service-img-icon">
+                            <img src="{% static  'images/icon/010-digital-marketing.png' %}" alt="service-icon" class="img-fluid">
+                        </div>
+                        <div class="service-inner">
+                            <h4> Data cience</h4>
+                            <p>We  provide <span>custom website</span> for any small and large company web based service in large compact package.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box">
+                        <div class="service-img-icon">
+                            <img src="{% static 'images/icon/006-analytics.png' %}" alt="service-icon" class="img-fluid">
+                        </div>
+                        <div class="service-inner">
+                            <h4>Content Growth</h4>
+                             <p>We  provide <span>custom website</span> for any small and large company web based service in large compact package.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box">
+                        <div class="service-img-icon">
+                            <img src="{% static 'images/icon/004-hiring.png' %}" alt="service-icon" class="img-fluid">
+                        </div>
+                        <div class="service-inner">
+                            <h4>Link Building </h4>
+                             <p>We  provide <span>custom website</span> for any small and large company web based service in large compact package.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  SERVICE AREA END  -->
+
+<!--  BLOG AREA START  -->
+    <section id="blog" class="section-padding bg-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 m-auto">
+                    <div class="section-heading">
+                        <h4 class="section-title">Latest Blog news</h4>
+                        <div class="line"></div>
+                        <p>Our blog journey may come handy to build a community to make more effective success for business. Latest and trend tricks will help a lot </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                 {% for post in  posts %} 
+                <div class="col-lg-4 col-sm-6 col-md-4">
+                    <div class="blog-block ">
+
+                        <img style="height: 274px; box-shadow:0px 1px 6px rgb(0 0 0 / 27%); border-radius: 5px;" src="{{ post.image.url }}" alt="" class="img-fluid">
+                        <div class="blog-text">
+                            <h6 class="author-name">
+                                 {% for cat in post.get_categories.all %}
+                                <span>{{ cat}}</span>
+                                {% endfor %}
+                            {{ post.author | title }}</h6>
+                            <a href="{% url 'blog:post-detail'  post.slug%}" class="h5 my-2 d-inline-block">
+                               {{post.title}}.
+                            </a>
+                            <p>{{ post.body| striptags|safe | linebreaks|truncatechars:154  }}</p>
+                        </div>
+
+                    </div>
+                </div>
+                 {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--  BLOG AREA END  -->
+<!--  COUNTER AREA START  -->
+<section id="counter" class="section-padding">
+    <div class="overlay dark-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="counter-stat">
+                    <i class="icofont icofont-heart"></i>
+                    <span class="counter">460</span>
+                    <h5>Our Happy Clients</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="counter-stat">
+                    <i class="icofont icofont-rocket"></i>
+                    <span class="counter">60</span>
+                    <h5>Projects Done</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="counter-stat">
+                    <i class="icofont icofont-hand-power"></i>
+                    <span class="counter">30</span>
+                    <h5>Experienced stuff</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="counter-stat">
+                    <i class="icofont icofont-shield-alt"></i>
+                    <span class="counter">25</span>
+                    <h5>Ongoning Projects</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

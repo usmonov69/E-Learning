@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+{% block extrahead %}
+<script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+{{ block.super }}
+{% endblock %}
+
+{% include "head.html" %}
+
+<body data-spy="scroll" data-target=".fixed-top">
+	{% include "header.html" %}
+
+	{% block content %}
+	{% endblock content %}
+
+	{% include 'footer.html' %}
+	{% include 'scripts.html' %}
+</body>
+</html>

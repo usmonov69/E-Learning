@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title  %}| Courses {% endblock %}        
+{% block content %}
+<!--MAIN BANNER AREA START -->
+<div class="page-banner-area page-service" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                <div class="banner-content content-padding">
+                    <h1 class="text-white">Recommended Courses  By Experts</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  SERVICE BLOCK2 START  -->
+<section id="service-2" class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box-2">
+                    <span>01</span>
+                    <h4>Best <br>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mattis metus, sit amet hendrerit lorem.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box-2">
+                    <span>02</span> 
+                    <h4>Deep <br>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mattis metus, sit amet hendrerit lorem.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box-2">
+                    <span>03</span>
+                    <h4>Modern <br>Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mattis metus, sit amet hendrerit lorem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  SERVICE BLOCK2 END  -->
+
+<!--  SERVICE AREA START  -->
+
+<!--  SERVICE PARTNER START  -->
+<section id="service-head" class="service-style-two">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-sm-12 m-auto">
+                <div class="heading text-white text-center">
+                    <h4 class="section-title text-white">recommended courses  by experts</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mattis metus, sit amet hendrerit lorem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  SERVICE PARTNER END  -->
+<!--  SERVICE AREA START  -->
+    <section id="service">
+        <div class="container">
+            <div class="row">
+                {% for course in courses %}
+                  <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box">
+                        <div >
+                            <a href="{{ course.get_absolute_url }}"><img  style="height: 192px;" src="{{ course.image.url }}" alt="programming-icon" >
+
+                        </div>
+                        <div class="service-inner">
+                            <h4>{{ course.title }}</h4></a>
+                            <p>{{ course.body| safe | linebreaks | truncatechars:100 }}</p><div class="date"><i class="fa fa-calendar-check"></i> {{ course.created_date | timesince }}  |   <i class="fa fa-user"></i> {{ course.author }}</div> 
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="{% url 'blog:all-course' %}"><div style="text-align: center;">see more course</div></a>
+        </div>
+    </section>
+    <!--  SERVICE AREA END  -->
+
+
+
+
+{% endblock content %}

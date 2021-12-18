@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title  %}| All Courses {% endblock %}        
+
+{% block content %}
+<!--MAIN BANNER AREA START -->
+<div class="page-banner-area page-service" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                <div class="banner-content content-padding">
+                    <h1 class="text-white">Services we provide</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--  SERVICE PARTNER END  -->
+<!--  SERVICE AREA START  -->
+    <section id="service">
+        <div class="container">
+            <div class="row">
+                {% for course in queryset %}
+                  <div class="col-lg-4 col-sm-6 col-md-6">
+                    <div class="service-box">
+                        <div >
+                            <a href="{{ course.get_absolute_url }}"><img  style="height: 192px;" src="{{ course.image.url }}" alt="programming-icon" >
+
+                        </div>
+                        <div class="service-inner">
+                            <h4>{{ course.title |linebreaks |truncatechars:30 }}</h4></a>
+                            <p>{{ course.body | safe | linebreaks | truncatechars:100 }}</p><div class="date"><i class="fa fa-calendar-check"></i> {{ course.created_date | timesince }}  |   <i class="fa fa-user"></i> {{ course.author }}</div> 
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        <nav aria-label="Page navigation example">
+              <ul class="pagination pagination-template d-flex justify-content-center">
+                <li class="page-item">
+                   {% if queryset.has_previous %}
+                <a href="?{{ page_request_var }}={{ queryset.previous_page_number }}" class="page-link"> <i class="fa fa-angle-left"></i></a>
+                  {% endif %}
+              </li>
+                <li class="page-item"><a  href="?{{ page_request_var }}={{ queryset.page.number }}"class="page-link active">{{ queryset.number }}</a></li>
+                <li class="page-item">
+                    {% if queryset.has_next %}
+                  <a  href="?{{ page_request_var }}={{ queryset.next_page_number }}" class="page-link"> <i class="fa fa-angle-right"></i></a>
+                    {% endif %}
+                </li>
+              </ul>
+            </nav>
+    </section>
+    <!--  SERVICE AREA END  -->
+
+
+
+
+{% endblock content %}

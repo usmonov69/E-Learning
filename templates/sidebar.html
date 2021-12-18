@@ -1,0 +1,58 @@
+            <div  class="col-lg-4">
+                 <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget search">
+                                <div class="form-group">
+                                    <form action="{% url 'blog:post-search' %}">
+                                    <input type="text" name="q" id="post-search" placeholder="search" class="form-control">
+                                    <i class="fa fa-search"></i>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget about-bar">
+                                <h5 class="mb-3">About us</h5>
+                                <p>Nostrum ullam porro iusto. Fugit eveniet sapiente nobis nesciunt velit cum fuga doloremque dignissimos asperiores</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget category">
+                                    <h5 class="mb-3">Category</h5>
+                                 <ul class="list-styled">
+                                      {% for cat in category %}
+                                        <li>
+                                        {{ cat.name }}
+                                        </li>
+                                    {% endfor %}                                      
+                                </ul>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget tag">
+                                <a href="#">web</a>
+                                <a href="#">development</a>
+                                <a href="#">seo</a>
+                                <a href="#">marketing</a>
+                                <a href="#">branding</a>
+                                <a href="#">web deisgn</a>
+                                <a href="#">Tutorial</a>
+                                <a href="#">Tips</a>
+                                <a href="#">Design trend</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="sidebar-widget download">
+                                {% if user.is_superuser %}
+                                <hr>
+                                    <a href="{% url 'blog:post-create' %}"> <i class="fa fa-plus-circle"></i>Create new post</a>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title  %}| Course Update {% endblock %}        
+{% load crispy_forms_tags %}
+{% block content %}
+    <!--MAIN HEADER AREA END -->
+<!--MAIN BANNER AREA START -->
+<div class="page-banner-area page-contact" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                <div class="banner-content content-padding">
+                    <h1 class="text-white">Update Course</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--MAIN HEADER AREA END -->
+
+<section class="section blog-wrap ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+               <div class="row">
+                {% if user.is_staff %}
+                {{ form.media }}
+               	<form action="" method="POST" enctype="multipart/form-data">
+               		{% csrf_token %}
+               		{{ form | crispy }}
+                     <button type="submit" class="btn btn-hero btn-circled">Submit</button>
+               	</form>
+                </div>
+                 {% else %}
+               <h1> You are not allowed</h1>
+                {% endif %}
+
+            </div>
+
+            </div> 
+           
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title  %}| Blog Posts {% endblock %}        
+{% block content %}
+    <!--MAIN HEADER AREA END -->
+<!--MAIN BANNER AREA START -->
+<div class="page-banner-area page-contact" id="page-banner">
+    <div class="overlay dark-overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                <div class="banner-content content-padding">
+                    <h1 class="text-white">Latest news</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--MAIN HEADER AREA END -->
+
+<section class="section blog-wrap ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                            {% for post in queryset  %}
+                        <div class="col-lg-6">
+                            <div class="blog-post">
+
+                                 <img style="height: 234px; width: 100%;" src="{{ post.image.url }}" alt="" class="img-fluid">
+                                <div class="mt-4 mb-3 d-flex">
+                                    <div class="post-author mr-3">
+                                        <i class="fa fa-user"></i>
+                                       <span class="h6 text-uppercase">{{ post.author }}</span>
+                                    </div>
+
+                                    <div class="post-info">
+                                        <i class="fa fa-calendar-check"></i>
+                                        <span>{{ post.created_date }}</span>
+                                    </div>
+                                </div>
+                                <a href="{{ post.get_absolute_url }}" class="h4 ">{{ post.title | linebreaks | truncatechars:26 }}</a>
+                                <p class="mt-3">{{ post.body | striptags|safe  |linebreaks| truncatechars:140  }}</p>
+                                <a href="{{ post.get_absolute_url }}" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                    </div>
+
+                   
+
+                    
+
+            </div>
+           
+            {% include 'sidebar.html' %}
+            </div>   
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

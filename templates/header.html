@@ -1,0 +1,44 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg fixed-top trans-navigation">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+               E-Learning
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+              </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav ">
+                   <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'blog:index-view' %}" id="navbarWelcome"   >
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smoth-scroll" href="{% url 'blog:about-view' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smoth-scroll" href="{% url 'blog:course-view' %}">Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smoth-scroll" href="{% url 'blog:blog-view' %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smoth-scroll " href="{% url 'blog:contact-view' %}">Contact</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                     <li class="nav-item">
+                        <a class="nav-link smoth-scroll " href="{% url 'account_logout' %}">signout</a>
+                    </li>
+                    {% else %}
+                     <li class="nav-item">
+                        <a class="nav-link smoth-scroll " href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
